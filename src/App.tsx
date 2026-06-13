@@ -10,7 +10,7 @@ function App() {
   const [search, setSearch] = useState("");
 
   async function handleAddBook(book: NewBook) {
-    const response = await fetch("http://localhost:3000/books", {
+    const response = await fetch("https://book-tracker-backend2.onrender.com/books", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -36,7 +36,7 @@ function App() {
 
   async function handleBookDelete(id: number) {
     try {
-      await fetch(`http://localhost:3000/books/${id}`, {
+      await fetch(`https://book-tracker-backend2.onrender.com/books/${id}`, {
         method: "DELETE",
       });
     } catch (error) {
@@ -58,7 +58,7 @@ function App() {
 
 
   useEffect(() => {
-    fetch("http://localhost:3000/books")
+    fetch("https://book-tracker-backend2.onrender.com/books")
       .then((response) => response.json())
       .then((data) => setBooks(data));
   }, []);
