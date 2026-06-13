@@ -20,12 +20,8 @@
   "dependencies": {
     "better-sqlite3": "^12.10.0",
     "express": "^5.2.1",
-    "better-sqlite3": "^12.10.0",
     "cors": "^2.8.6",
     "express": "^5.2.1",
-    "mongoose": "^9.6.3",
-    "react": "^19.2.6",
-    "react-dom": "^19.2.6",
-    "sass": "^1.100.0"
+    "mongoose": "^9.6.3"
   }
 }
