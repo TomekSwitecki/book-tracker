@@ -10,7 +10,7 @@ function App() {
   const [search, setSearch] = useState("");
 
   async function handleAddBook(book: NewBook) {
-    const response = await fetch("https://book-tracker-backend2.onrender.com/books", {
+    const response = await fetch("https://backend-production-7655a.up.railway.app/books", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -36,7 +36,7 @@ function App() {
 
   async function handleBookDelete(id: number) {
     try {
-      await fetch(`https://book-tracker-backend2.onrender.com/books/${id}`, {
+      await fetch(`https://backend-production-7655a.up.railway.app/books/${id}`, {
         method: "DELETE",
       });
     } catch (error) {
@@ -58,7 +58,7 @@ function App() {
 
 
   useEffect(() => {
-    fetch("https://book-tracker-backend2.onrender.com/books")
+    fetch("https://backend-production-7655a.up.railway.app/books")
       .then((response) => response.json())
       .then((data) => setBooks(data));
   }, []);
